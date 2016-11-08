@@ -1,0 +1,182 @@
+# Swift Summit
+
+## Flexible Code for Generic Collections
+_[Nate Cook](https://twitter.com/nnnnnnnn)_
+
+In addition to the familiar arrays, sets, and dictionaries, the Swift standard library includes a wide range of other collections that enable powerful and efficient transformations. Reaping the benefits of these views and wrappers, however, requires delving into the challenging world of generic and protocol-oriented programming.
+
+This talk will focus on how to get the most out of Swift's sometimes daunting system of collections. We'll explore how the sequence and collection protocols enable different operations, survey the breadth of concrete collection types, and learn how to write methods that can work with any collection.
+
+* Create generic type by using `AnyCollection` and initializer
+* Check if all values of an array are true by using protocol (e.g. `extension Sequence where Iterator.Element == Bool`)
+* [Legos](https://twitter.com/nnnnnnnn/status/794602968314183680)
+* TODO: Go back and review slides (where are slides?)
+
+## Swift at Scale
+_[Kamilah Taylor](https://twitter.com/kamilah)
+
+## A Quantitive Look at Swift Usage
+_[Christopher Stott](https://twitter.com/chrisYVR)_
+
+![Last slide, blue with Twitter handle]()
+
+* Getting CI to work with iOS apps isn't easy
+![Blue slide with 19 pages to setup jenkins]()
+* [Buddybuild](https://buddybuild.com/) is a one step solution to get CI/deployment setup
+  - Crash reporting with a lot of visuals (instant replays)
+  - Slack, Meetup use Buddybuild
+* Data from Buddybuild
+  - Watch app - 97% of apps do not have a watch app. Lots more with watchOS 2
+  - tvOS 99.7% are iOS compared to tvOS
+  - 91% use Swift, rest are Hybrid (Cordova, React Native, etc)
+    - Reactive Native accounts for 68% of Hybrid apps, 6% of total apps
+  - 21% Swift only, 33% Obj C only, rest mixed
+  - Only 1% of apps turn off bitcode - must be working well
+  - 5% of apps are missing the Podfile.lock from the repo
+  - Most popular frameworks:
+  ![White slide with framework usage]()
+  - 40% of apps do not have tests
+  - 16% of apps are actively running tests (out of those using CI)
+
+## ProcedureKit and You
+_[Jon Shier](https://twitter.com/jshier)_
+
+Operations (formerly NSOperations) are powerful abstractions around asynchronous tasks that provide support for building chains of dependencies to be run in the background. The ProcedureKit library provides enhanced subclasses of Operation, starting with Procedure, that include abilities like conditions, which determine whether an operation can run, capabilities, which allow Procedures to ask the system and your app for permissions, and observers, which offer an easy, closure-based approach to observing the state of procedures. In addition it provides high level procedure wrappers around things like CloudKit, view controller presentation, and UIAlertController presentation.
+
+In this talk, Jon will demonstrate how to use the ProcedureKit library to enhance the asynchronous operation of your apps, from the basic Procedure it offers to it’s more advanced usage. This includes GroupProcedures, which execute multiple procedures as a single task; RepeatedProcedure, which can repeat a procedure until certain conditions are met; and the built in support for result injection, which allows you to communicate results between procedures without tightly coupling them.
+
+## Pushing the boundaries of Swift to the Server
+_[Chris Bailey](https://twitter.com/Chris__Bailey)_
+
+* Why use Swift on the server?
+  - Duration: ![Duration bar graph]()
+  - Mem usage: ![Mem usage bar graph]()
+* "Swift Everywhere"
+  - Officially supported on macOS and Linux
+  - Also IBM LinuxONE, Raspberry Pi, Android
+* [Kitura Web Framework](https://github.com/IBM-Swift/Kitura)
+  - Adds networking, security, HTTP parsing layers
+![Kitura Web Framework slide]()
+
+## Storyboards Revisited
+_[Paul Stringer](https://twitter.com/paulstringer)_
+
+* Why use storyboards?
+  - Less boiler-plate
+  - Create and preview layout
+  - Visualize flow
+* The 'Segue' Problem
+* Every change in storyboard requires a change in code - nonorthogonal design
+* Think declaratively (specifying what is to be done, not how)
+* Strongly coupled view controllers increase complication
+* Decoupling view controllers by adding a coordinator
+* Use protocols to handle `accept` and `visit`
+
+## Talking to Swift
+_[Alex Gallagher](https://twitter.com/alexisgallagher)_
+
+* With iOS 10, use [SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1) to create new conversational UI
+* How do you design a conversational UI?
+* What is it?
+  1. Messaging as an interaction model
+  2. Chatbots (Siri, Google, Amazon Alexa, Xfinity X1, Slackbot... but also voice-base customer service phone tree, automated telephone survey, email spam)
+    - chatbots = restricted domain bots
+  3. Voice
+    - significant progress in speech recognition
+* How to design it
+  1. Develop a character
+  2. Restrict the domain - voice UI is _opposite_ of message thread UI (ex. thread has history accessible, voice has no history)
+
+## How to Rescue a Codebase
+_[Ben Sandofsky](https://twitter.com/sandofsky)_
+
+* Rewriting a code base is always easier than it seems (Netscape decided to do so and it took 3 years in the middle of the browser wars 😮)
+* Two approaches to consider before rewriting the app:
+  1. Rewrite layers (sections) with adapters to legacy codes.
+    - Pro: Smaller risk
+    - Pro: Bundles the rewrite with new functionality
+    - Con: Work on interoperability
+    - Con: If abandoned, now you have two problems
+  2. The Inline Rewrite (fixing things)
+    - When going into the codebase, come out leaving things better than the way you found them
+    - Test coverage helps pin down other parts of the app that could be effected by refactors
+* [Working Effectively with Legacy Code](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052)
+* Tips
+  - Don't underestimate preserving existing behavior
+  - If you have to rewrite, reduce scope
+  - Start with separation of concerns
+  - Think in abstractions
+  - Leave a trail of tests
+  - Focus on small steps. One thing at a time
+
+## The Unreasonable Effectiveness of Declarative Code
+_[Benjamin Encz](https://twitter.com/benjaminencz)_
+
+* Facts instead of behavior
+* Example:
+```
+usernameLabel.racText <~ user.name
+```
+* Imperative would be waiting for an action, then updating UI
+* Example of implementation in Swift:
+![Slide of example request/response]()
+* Further reading:
+  - See Slides
+
+<small>[Slides](https://t.co/toYnGNOjc7)</small>
+
+## Swift & Security
+_[Dzung Pham](https://twitter.com/joonefam)_
+
+With security features such as App Transport Security (ATS), crypto framework libraries, etc. Apple has shifted the security decisions from the programming language to the platform. This has influenced the design of Swift into the powerful and intuitive programming language we all know and love. Nevertheless, the security measures provided by the architecture does not guarantee the security of Swift applications.
+
+Improper framework implementation in Swift can create weaknesses and vulnerabilities for attackers to exploit. For example, improper implementation of session management can lead to session hijacking attack or information leakage - sensitive information might be stored locally in the device.
+
+In this presentation, we will go over some main security features that are built into Swift. We will also walk through some abuse cases that make an application vulnerable. Example for improper use of frameworks will be demonstrated.
+
+* Static tooling
+  - SSL scanner: sslscan, sslyze, ssllabs
+  - Proxy: Burp Suite
+  - Reverse Engineering: IDA Pro, Hopper, idb
+  - Exploring files: iFile, openSSH
+
+## Clear as a Bell: Sharing Technical Expertise
+_[Laura Savino](https://twitter.com/savinola)_
+
+* Teachers let students think.
+  - Don't answer your own question. Ask your question and wait 7 seconds (other person doesn't realize it's been so long because they're thinking about the problem)
+  - Hands behind your back. Forces teacher to describe in words.
+  - Ask "Do you want me to try to teach you or do you want me to just tell you?"
+  - Search for:
+    - Student-centered learning
+    - active/passive learning
+* Teachers convey why it matters
+  - "When am I actually going to need this?"
+  - Tell a story (Nate in the first talk used Legos to illustrate)
+  - Agree on the problem
+  - Search for:
+    - ["Thinking Fast and Slow," Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
+    - ["The Four Phase Model of Interest Development"](http://eric.ed.gov/)
+* Teachers make concrete learning objectives
+  - Describe specific outcomes. Don't say things like "Make Core Data better," be more specific
+  - Search for:
+    - "learning objectives" or "outcomes"
+    - "learning goals"
+    - "Bloom's taxonomy"
+* Teachers bring activities to engage with
+  - Teaching Git, use a Github of poems
+  - Practice
+  - Search for:
+    - scaffolding
+    - guided learning
+    - worked examples
+* Teachers change gears
+  - People will pay attention for `age + 2` 😜
+  - Switch it up so your audience stays engaged
+* Teachers make students awesomer
+* Teachers evaluate
+  - Feedback for how lessons worked
+  - It's like submitting a pull request without running the code
+* Excellent teachers have experience
+  - A way out if not a professional teacher: "If you have trouble following, it might be my explanation"
+  - We all teach!
