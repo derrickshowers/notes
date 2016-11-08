@@ -285,3 +285,21 @@ _[Tuomas Artman](https://twitter.com/artman)_
   ![Survey slide]()
   - Change settings in Xcode, saved build times from 20 minutes to 6 (but you don't get incremental builds)
   ![Xcode screenshot slide]()
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Interfacing with GraphQL is Swift
+_[Sammer Panage](https://twitter.com/Sommer)_
+
+This talk will discuss the challenges faced when dealing with dynamic GraphQL queries and responses in a statically typed language such as Swift.
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Title
+_[Name](https://twitter.com/)_
+
+<small>[Video]() | [Slides]()</small>
