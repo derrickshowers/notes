@@ -12,16 +12,20 @@ This talk will focus on how to get the most out of Swift's sometimes daunting sy
 * [Legos](https://twitter.com/nnnnnnnn/status/794602968314183680)
 * TODO: Go back and review slides (where are slides?)
 
+<small>[Video]() | [Slides]()</small>
+
+---
+
 ## Swift at Scale
 _[Kamilah Taylor](https://twitter.com/kamilah)
 
 ## A Quantitive Look at Swift Usage
 _[Christopher Stott](https://twitter.com/chrisYVR)_
 
-![Last slide, blue with Twitter handle]()
+![Christopher contact information](../resources/images/conferences-swiftSummit2016-003.jpg)
 
 * Getting CI to work with iOS apps isn't easy
-![Blue slide with 19 pages to setup jenkins]()
+![](../resources/images/conferences-swiftSummit2016-001.jpg)
 * [Buddybuild](https://buddybuild.com/) is a one step solution to get CI/deployment setup
   - Crash reporting with a lot of visuals (instant replays)
   - Slack, Meetup use Buddybuild
@@ -34,9 +38,13 @@ _[Christopher Stott](https://twitter.com/chrisYVR)_
   - Only 1% of apps turn off bitcode - must be working well
   - 5% of apps are missing the Podfile.lock from the repo
   - Most popular frameworks:
-  ![White slide with framework usage]()
+  ![List of popular frameworks](../resources/images/conferences-swiftSummit2016-002.jpg)
   - 40% of apps do not have tests
   - 16% of apps are actively running tests (out of those using CI)
+
+<small>[Video]() | [Slides]()</small>
+
+---
 
 ## ProcedureKit and You
 _[Jon Shier](https://twitter.com/jshier)_
@@ -45,18 +53,26 @@ Operations (formerly NSOperations) are powerful abstractions around asynchronous
 
 In this talk, Jon will demonstrate how to use the ProcedureKit library to enhance the asynchronous operation of your apps, from the basic Procedure it offers to it’s more advanced usage. This includes GroupProcedures, which execute multiple procedures as a single task; RepeatedProcedure, which can repeat a procedure until certain conditions are met; and the built in support for result injection, which allows you to communicate results between procedures without tightly coupling them.
 
+<small>[Video]() | [Slides]()</small>
+
+---
+
 ## Pushing the boundaries of Swift to the Server
 _[Chris Bailey](https://twitter.com/Chris__Bailey)_
 
 * Why use Swift on the server?
-  - Duration: ![Duration bar graph]()
-  - Mem usage: ![Mem usage bar graph]()
+  - Duration: ![Performance comparison](../resources/images/conferences-swiftSummit2016-004.jpg)
+  - Mem usage: ![Memory usage comparison](../resources/images/conferences-swiftSummit2016-005.jpg)
 * "Swift Everywhere"
   - Officially supported on macOS and Linux
   - Also IBM LinuxONE, Raspberry Pi, Android
 * [Kitura Web Framework](https://github.com/IBM-Swift/Kitura)
   - Adds networking, security, HTTP parsing layers
-![Kitura Web Framework slide]()
+![Kitura Web Framework](../resources/images/conferences-swiftSummit2016-006.jpg)
+
+<small>[Video]() | [Slides]()</small>
+
+---
 
 ## Storyboards Revisited
 _[Paul Stringer](https://twitter.com/paulstringer)_
@@ -72,6 +88,10 @@ _[Paul Stringer](https://twitter.com/paulstringer)_
 * Decoupling view controllers by adding a coordinator
 * Use protocols to handle `accept` and `visit`
 
+<small>[Video]() | [Slides]()</small>
+
+---
+
 ## Talking to Swift
 _[Alex Gallagher](https://twitter.com/alexisgallagher)_
 
@@ -86,6 +106,10 @@ _[Alex Gallagher](https://twitter.com/alexisgallagher)_
 * How to design it
   1. Develop a character
   2. Restrict the domain - voice UI is _opposite_ of message thread UI (ex. thread has history accessible, voice has no history)
+
+<small>[Video]() | [Slides]()</small>
+
+---
 
 ## How to Rescue a Codebase
 _[Ben Sandofsky](https://twitter.com/sandofsky)_
@@ -109,6 +133,10 @@ _[Ben Sandofsky](https://twitter.com/sandofsky)_
   - Leave a trail of tests
   - Focus on small steps. One thing at a time
 
+<small>[Video]() | [Slides]()</small>
+
+---
+
 ## The Unreasonable Effectiveness of Declarative Code
 _[Benjamin Encz](https://twitter.com/benjaminencz)_
 
@@ -119,11 +147,13 @@ usernameLabel.racText <~ user.name
 ```
 * Imperative would be waiting for an action, then updating UI
 * Example of implementation in Swift:
-![Slide of example request/response]()
+![Slide of example request/response](../resources/images/conferences-swiftSummit2016-007.jpg)
 * Further reading:
   - See Slides
 
-<small>[Slides](https://t.co/toYnGNOjc7)</small>
+<small>[Video]() | [Slides](https://t.co/toYnGNOjc7)</small>
+
+---
 
 ## Swift & Security
 _[Dzung Pham](https://twitter.com/joonefam)_
@@ -139,6 +169,10 @@ In this presentation, we will go over some main security features that are built
   - Proxy: Burp Suite
   - Reverse Engineering: IDA Pro, Hopper, idb
   - Exploring files: iFile, openSSH
+
+<small>[Video]() | [Slides]()</small>
+
+---
 
 ## Clear as a Bell: Sharing Technical Expertise
 _[Laura Savino](https://twitter.com/savinola)_
@@ -180,3 +214,74 @@ _[Laura Savino](https://twitter.com/savinola)_
 * Excellent teachers have experience
   - A way out if not a professional teacher: "If you have trouble following, it might be my explanation"
   - We all teach!
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Pushing the Limits of Protocol Oriented Programming
+_[Jessie Squires](https://twitter.com/jesse_squires)_
+
+* SOLID design principles](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29)
+* The "I" in SOLID: No client should depend on (or know about) methods it does not use
+  - Small, separated interfaces == focused API
+  - Restrict access
+  - Unify disjoing types
+* Protocols help us write code that:
+  1. modular
+  2. dynamic
+  3. testable
+* Protocols+Extensions expand our design space
+
+## Data Consistency in an Unpredictable World
+_[Wendy Lu](https://twitter.com/wendyluwho)_
+
+* Move initialization code from `applicationDidFinishLaunching` to background queues, for Pinterest startup time reduced by 50%
+* Immutable model layer. Most of the probably with mutability lies in shared state. With an immutable model, you don't have to worry about something else writing to a model while reading it.
+* Data builder uses `NSNotificationCenter` to accomplish using immutable models. Checks cache (using [PINCache](https://github.com/pinterest/PINCache)) before making request to the server.
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Swift With Hundreds of Engineers
+_[Tuomas Artman](https://twitter.com/artman)_
+
+### Motivation
+
+* Old architecture written by 2 engineers - hard to introduce new features
+* UX didn't scale (e.g. product slider became too dense for some cities)
+* "Let's just change everything"
+* 99.99% reliability of core flows (decrease crashes)
+* Support Uber's growth for years to come
+* ![Timeline slide]()
+
+### Architecture
+
+* "Riblets" - Router, Interaction, Builder (and possibility a presenter and a view)
+* ![Presidio architecture slide](conferences-swiftSummit2016-001.jpg)
+
+### Learnings
+
+* Swift - the good
+  - Great reliability (99.99% crash-free rate target)
+  - No implicitly unwrapped options (`person!`)
+  - Android engineers more welcome
+* Swift - the bad
+  - Testing is hard. Developed a script to create mocks due to complexity testing protocols.
+  - Tooling issues - CPU usage, processing files
+    - Use AppCode as an alternative
+    - Contribute back to Nuclide (doesn't yet support Swift)
+    - More frameworks
+  - Binary size (100mb)
+    - Structs are allocated on the stack and can increase binary size
+    - Options are implemented as enums and add code you might be unaware of
+    - Generics are awesome, but speed comes at a cost
+    - Swift runtime libraries
+    - Uber wrote a tool to check size by Swift file
+    ![Slide showing tool]()
+* Swift - the ugly
+  - Compile times based on survey
+  ![Survey slide]()
+  - Change settings in Xcode, saved build times from 20 minutes to 6 (but you don't get incremental builds)
+  ![Xcode screenshot slide]()
