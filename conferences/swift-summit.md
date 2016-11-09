@@ -38,7 +38,7 @@ _[Christopher Stott](https://twitter.com/chrisYVR)_
   - Only 1% of apps turn off bitcode - must be working well
   - 5% of apps are missing the Podfile.lock from the repo
   - Most popular frameworks:
-  ![List of popular frameworks](../resources/images/conferences-swiftSummit2016-002.jpg)
+![List of popular frameworks](../resources/images/conferences-swiftSummit2016-002.jpg)
   - 40% of apps do not have tests
   - 16% of apps are actively running tests (out of those using CI)
 
@@ -61,8 +61,10 @@ In this talk, Jon will demonstrate how to use the ProcedureKit library to enhanc
 _[Chris Bailey](https://twitter.com/Chris__Bailey)_
 
 * Why use Swift on the server?
-  - Duration: ![Performance comparison](../resources/images/conferences-swiftSummit2016-004.jpg)
-  - Mem usage: ![Memory usage comparison](../resources/images/conferences-swiftSummit2016-005.jpg)
+  - Duration:
+![Performance comparison](../resources/images/conferences-swiftSummit2016-004.jpg)
+  - Mem usage:
+![Memory usage comparison](../resources/images/conferences-swiftSummit2016-005.jpg)
 * "Swift Everywhere"
   - Officially supported on macOS and Linux
   - Also IBM LinuxONE, Raspberry Pi, Android
@@ -254,12 +256,12 @@ _[Tuomas Artman](https://twitter.com/artman)_
 * "Let's just change everything"
 * 99.99% reliability of core flows (decrease crashes)
 * Support Uber's growth for years to come
-* ![Timeline slide]()
+![Timeline](../resources/images/conferences-swiftSummit2016-008.jpg)
 
 ### Architecture
 
 * "Riblets" - Router, Interaction, Builder (and possibility a presenter and a view)
-* ![Presidio architecture slide](conferences-swiftSummit2016-001.jpg)
+![Presidio architecture](../resources/images/conferences-swiftSummit2016-009.jpg)
 
 ### Learnings
 
@@ -279,12 +281,12 @@ _[Tuomas Artman](https://twitter.com/artman)_
     - Generics are awesome, but speed comes at a cost
     - Swift runtime libraries
     - Uber wrote a tool to check size by Swift file
-    ![Slide showing tool]()
+![](../resources/images/conferences-swiftSummit2016-010.jpg)
 * Swift - the ugly
   - Compile times based on survey
-  ![Survey slide]()
+![Survey](../resources/images/conferences-swiftSummit2016-011.jpg)
   - Change settings in Xcode, saved build times from 20 minutes to 6 (but you don't get incremental builds)
-  ![Xcode screenshot slide]()
+![Xcode build setting](../resources/images/conferences-swiftSummit2016-002.jpg)
 
 <small>[Video]() | [Slides]()</small>
 
@@ -299,7 +301,76 @@ This talk will discuss the challenges faced when dealing with dynamic GraphQL qu
 
 ---
 
-## Title
-_[Name](https://twitter.com/)_
+## Launch Arguments - The Mysteries
+_[Marin Usalj](https://twitter.com/_supermarin)_
+
+* Process arguments (e.g. `ls -l` or `git commit -m <msg>`)
+* Set process arguments in scheme in Xcode to change behavior (e.g. look for strings not localized), but they're not documented. 😕
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Dynamic Swift
+_[Chris Eidhofj](https://twitter.com/chriseidhof)_
+
+In this talk, we'll see why Swift is a very dynamic language. We'll look at an example of runtime programming, which is what made Objective-Cdynamic, and reimplement it using functions, which is what makes Swift dynamic.
+
+* Pattern to create generic function for sorting
+![Code example](../resources/images/conferences-swiftSummit2016-014.jpg)
+* Refactor using generics
+![Code example with gemeric](../resources/images/conferences-swiftSummit2016-015.jpg)
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Contributing to the Swift Compiler
+_[Ayaka Nonaka](https://twitter.com/ayanonagon)_
+
+A few months ago, I somehow ended up contributing a non-trivial diff to the Swift compiler without much prior experience with C++ and absolutely zero with compilers, and a lot of people have been asking me how I managed to pull that off. This talk will go over how to get up and running with the Swift compiler and how you can contribute too even if it feels completely new and scary!
+
+* Make sure you don't need a proposal for what you're about to do. Check [swift-evolution](https://github.com/apple/swift-evolution)
+* Start small (with a bug?)
+* It can be hard because there aren't a lot of blog posts, resources out there (not a lot of people have done it)
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Rubik's Cubes and Genetic Algorithms in Swift
+_[Javier Soto](https://twitter.com/Javi)_
+
+Genetic Algorithms are a fascinating way of solving problems in computer science inspired by biological evolution. I implemented one in Swift to solve Rubik's Cubes, and you won't believe what happened next.
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Clarity, Cohesion, Coupling, Complexity
+_[Greg Heo](https://twitter.com/gregheo)_
+
+Writers often say the way to become a better writer is to do a lot of reading. The same applies to code: if you take the time to read Swift code—both good and bad—it will expand your horizons and make you a better programmer.
+
+In this talk, Greg will take you through some bits of the open-source Swift repository. We’ll use the four C's—clarity, cohesion, coupling, and complexity—as a lens to examine coding practices. You'll get a look at how parts of Foundation and the standard library are built in Swift, and the goal is to come away with some new ideas and best practices to use in your own projects and build up your skills.
+
+* First step to writing better code, _read_ more code
+* See slides for suggestions on how to write better code
+
+<small>[Video]() | [Slides]()</small>
+
+---
+
+## Swift Enums and State Machines
+_[Christina Lee](https://twitter.com/RunChristinaRun)_
+
+* Why Enums?
+  - Type safe
+  - Give compile time warnings
+  - Built in case logic
+* Models use reducers to update enum cases
+* Reducers link a UI event to what the new state should be
+* View controller binds state to UI - makes view controller simple
+* All the heavy lifting is done in reducers (easy to reason about because they're granular)
 
 <small>[Video]() | [Slides]()</small>
