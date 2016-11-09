@@ -12,7 +12,7 @@ This talk will focus on how to get the most out of Swift's sometimes daunting sy
 * [Legos](https://twitter.com/nnnnnnnn/status/794602968314183680)
 * TODO: Go back and review slides (where are slides?)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -24,8 +24,10 @@ _[Christopher Stott](https://twitter.com/chrisYVR)_
 
 ![Christopher contact information](../resources/images/conferences-swiftSummit2016-003.jpg)
 
-* Getting CI to work with iOS apps isn't easy
+### Getting CI to work with iOS apps isn't easy
+
 ![](../resources/images/conferences-swiftSummit2016-001.jpg)
+
 * [Buddybuild](https://buddybuild.com/) is a one step solution to get CI/deployment setup
   - Crash reporting with a lot of visuals (instant replays)
   - Slack, Meetup use Buddybuild
@@ -42,7 +44,7 @@ _[Christopher Stott](https://twitter.com/chrisYVR)_
   - 40% of apps do not have tests
   - 16% of apps are actively running tests (out of those using CI)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -53,7 +55,7 @@ Operations (formerly NSOperations) are powerful abstractions around asynchronous
 
 In this talk, Jon will demonstrate how to use the ProcedureKit library to enhance the asynchronous operation of your apps, from the basic Procedure it offers to it’s more advanced usage. This includes GroupProcedures, which execute multiple procedures as a single task; RepeatedProcedure, which can repeat a procedure until certain conditions are met; and the built in support for result injection, which allows you to communicate results between procedures without tightly coupling them.
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -72,7 +74,7 @@ _[Chris Bailey](https://twitter.com/Chris__Bailey)_
   - Adds networking, security, HTTP parsing layers
 ![Kitura Web Framework](../resources/images/conferences-swiftSummit2016-006.jpg)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -90,7 +92,7 @@ _[Paul Stringer](https://twitter.com/paulstringer)_
 * Decoupling view controllers by adding a coordinator
 * Use protocols to handle `accept` and `visit`
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -109,7 +111,7 @@ _[Alex Gallagher](https://twitter.com/alexisgallagher)_
   1. Develop a character
   2. Restrict the domain - voice UI is _opposite_ of message thread UI (ex. thread has history accessible, voice has no history)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -135,7 +137,7 @@ _[Ben Sandofsky](https://twitter.com/sandofsky)_
   - Leave a trail of tests
   - Focus on small steps. One thing at a time
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -153,7 +155,7 @@ usernameLabel.racText <~ user.name
 * Further reading:
   - See Slides
 
-<small>[Video]() | [Slides](https://t.co/toYnGNOjc7)</small>
+<sup>[Video]() | [Slides](https://t.co/toYnGNOjc7)</sup>
 
 ---
 
@@ -172,7 +174,7 @@ In this presentation, we will go over some main security features that are built
   - Reverse Engineering: IDA Pro, Hopper, idb
   - Exploring files: iFile, openSSH
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -217,7 +219,7 @@ _[Laura Savino](https://twitter.com/savinola)_
   - A way out if not a professional teacher: "If you have trouble following, it might be my explanation"
   - We all teach!
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -242,7 +244,7 @@ _[Wendy Lu](https://twitter.com/wendyluwho)_
 * Immutable model layer. Most of the probably with mutability lies in shared state. With an immutable model, you don't have to worry about something else writing to a model while reading it.
 * Data builder uses `NSNotificationCenter` to accomplish using immutable models. Checks cache (using [PINCache](https://github.com/pinterest/PINCache)) before making request to the server.
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -288,7 +290,7 @@ _[Tuomas Artman](https://twitter.com/artman)_
   - Change settings in Xcode, saved build times from 20 minutes to 6 (but you don't get incremental builds)
 ![Xcode build setting](../resources/images/conferences-swiftSummit2016-002.jpg)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -297,7 +299,7 @@ _[Sammer Panage](https://twitter.com/Sommer)_
 
 This talk will discuss the challenges faced when dealing with dynamic GraphQL queries and responses in a statically typed language such as Swift.
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -307,7 +309,7 @@ _[Marin Usalj](https://twitter.com/_supermarin)_
 * Process arguments (e.g. `ls -l` or `git commit -m <msg>`)
 * Set process arguments in scheme in Xcode to change behavior (e.g. look for strings not localized), but they're not documented. 😕
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -321,7 +323,7 @@ In this talk, we'll see why Swift is a very dynamic language. We'll look at an e
 * Refactor using generics
 ![Code example with gemeric](../resources/images/conferences-swiftSummit2016-015.jpg)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -334,7 +336,7 @@ A few months ago, I somehow ended up contributing a non-trivial diff to the Swif
 * Start small (with a bug?)
 * It can be hard because there aren't a lot of blog posts, resources out there (not a lot of people have done it)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -343,7 +345,7 @@ _[Javier Soto](https://twitter.com/Javi)_
 
 Genetic Algorithms are a fascinating way of solving problems in computer science inspired by biological evolution. I implemented one in Swift to solve Rubik's Cubes, and you won't believe what happened next.
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -357,7 +359,7 @@ In this talk, Greg will take you through some bits of the open-source Swift repo
 * First step to writing better code, _read_ more code
 * See slides for suggestions on how to write better code
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
 
 ---
 
@@ -373,4 +375,4 @@ _[Christina Lee](https://twitter.com/RunChristinaRun)_
 * View controller binds state to UI - makes view controller simple
 * All the heavy lifting is done in reducers (easy to reason about because they're granular)
 
-<small>[Video]() | [Slides]()</small>
+<sup>[Video]() | [Slides]()</sup>
