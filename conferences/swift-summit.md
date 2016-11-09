@@ -288,7 +288,7 @@ _[Tuomas Artman](https://twitter.com/artman)_
   - Compile times based on survey
 ![Survey](../resources/images/conferences-swiftSummit2016-011.jpg)
   - Change settings in Xcode, saved build times from 20 minutes to 6 (but you don't get incremental builds)
-![Xcode build setting](../resources/images/conferences-swiftSummit2016-002.jpg)
+![Xcode build setting](../resources/images/conferences-swiftSummit2016-012.jpg)
 
 <sup>[Video]() | [Slides]()</sup>
 
