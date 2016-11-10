@@ -319,9 +319,9 @@ _[Chris Eidhofj](https://twitter.com/chriseidhof)_
 In this talk, we'll see why Swift is a very dynamic language. We'll look at an example of runtime programming, which is what made Objective-Cdynamic, and reimplement it using functions, which is what makes Swift dynamic.
 
 * Pattern to create generic function for sorting
-![Code example](../resources/images/conferences-swiftSummit2016-014.jpg)
+![Code example](../resources/images/conferences-swiftSummit2016-013.jpg)
 * Refactor using generics
-![Code example with gemeric](../resources/images/conferences-swiftSummit2016-015.jpg)
+![Code example with gemeric](../resources/images/conferences-swiftSummit2016-014.jpg)
 
 <sup>[Video]() | [Slides]()</sup>
 
