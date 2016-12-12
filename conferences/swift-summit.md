@@ -92,7 +92,7 @@ _[Paul Stringer](https://twitter.com/paulstringer)_
 * Decoupling view controllers by adding a coordinator
 * Use protocols to handle `accept` and `visit`
 
-<sup>[Video]() | [Slides](https://speakerdeck.com/paulstringer/storyboards-revisited)</sup>
+<sup>[Video]() | [Slides](https://speakerdeck.com/paulstringer/storyboards-revisited) | [Sample Code](https://github.com/paulstringer/StoryboardsRevisited)</sup>
 
 ---
 
